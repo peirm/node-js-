@@ -1,0 +1,16 @@
+/**
+ * Created by hahha on 2017/8/16.
+ */
+
+var filterFn = require('./program6-2.js');
+var dir = process.argv[2];
+var filterStr = process.argv[3];
+
+filterFn(dir,filterStr,function(err,list) {
+    if (err){
+        return console.error('There was an error:', err)
+    }
+    list.forEach(function(file){
+        console.log(file);
+    })
+})
